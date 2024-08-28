@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- 'Network Explorer' test suite -->
+<suite name="Group00c_create_users">
+    <test name="Create Users">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle" value="Create Users" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.security.cases.CreateUser">
+            </class>
+        </classes>
+    </test>
+</suite>

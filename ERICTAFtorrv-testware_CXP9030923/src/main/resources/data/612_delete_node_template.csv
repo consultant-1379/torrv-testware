@@ -1,0 +1,5 @@
+command,expectedBodyContains
+"cmedit get NetworkElement=$ManagedElementId18,CmNodeHeartbeatSupervision=1","1 instance(s)"
+"cmedit set NetworkElement=$ManagedElementId18,CmNodeHeartbeatSupervision=1 active=false","1 instance(s) updated"
+"cmedit delete MeContext=$ManagedElementId18 -ALL","FDN : MeContext=$ManagedElementId18"
+"cmedit delete NetworkElement=$ManagedElementId18 -ALL","FDN : NetworkElement=$ManagedElementId18"

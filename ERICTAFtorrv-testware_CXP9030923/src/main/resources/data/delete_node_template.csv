@@ -1,0 +1,8 @@
+command,expectedBodyContains
+"cmedit get NetworkElement=$ManagedElementId,CmNodeHeartbeatSupervision=1","1 instance(s)"
+"cmedit set NetworkElement=$ManagedElementId,CmNodeHeartbeatSupervision=1 active=false","1 instance(s) updated"
+"fmedit set NetworkElement=$ManagedElementId,FmAlarmSupervision=1 alarmSupervisionState=false","Supervision has been disabled successfully for 1 instance(s)"
+"cmedit get NetworkElement=$ManagedElementId,InventorySupervision=1","1 instance(s)"
+"cmedit set NetworkElement=$ManagedElementId,InventorySupervision=1 active=false","1 instance(s) updated"
+"cmedit action NetworkElement=$ManagedElementId,CmFunction=1 deleteNrmDataFromEnm","1 instance(s)"
+"cmedit delete NetworkElement=$ManagedElementId -ALL","instance(s) deleted"

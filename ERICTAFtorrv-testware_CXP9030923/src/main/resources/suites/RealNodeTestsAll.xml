@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="All DV Tests." preserve-order="true" parallel="false">
+    <suite-files>
+        <suite-file path="Group00a_initialize_node_pool.xml" />
+        <suite-file path="Group00b_initialize_user_pool.xml" />
+        <suite-file path="Group00c_create_users.xml" />
+        <suite-file path="Group01a_CM_CLI_UI_Smoke_Test.xml" />
+        <suite-file path="RealNode_Group01_CM_CLI_Tests.xml" />
+        <suite-file path="RealNode_Group02_CM_CLI_Config_Tests.xml" />
+        <!--<suite-file path="RealNode_Group03_Network_Explorer_Tests.xml" /> -->
+        <!--<suite-file path="RealNode_Group04_SHM_Tests.xml" /> -->
+        <!--<suite-file path="Group06_Monitoring_Tests.xml" /> -->
+        <!--<suite-file path="RealNode_Group07_PMIC_Inactive_Tests.xml" /> -->
+        <!--<suite-file path="RealNode_Group07_PMIC_Active_Tests.xml" /> -->
+        <!--<suite-file path="RealNode_Group08_FM_Tests.xml" /> -->
+        <!--<suite-file path="RealNode_Group09_Log_Viewer_Tests.xml" /> -->
+        <suite-file path="Group99_delete_users.xml" />
+    </suite-files>
+</suite>

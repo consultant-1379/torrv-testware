@@ -1,0 +1,4 @@
+command,expectedBodyContains
+"config create configDvTest17","Config successfully created"
+"config list","configDvTest17"
+"cmedit get * MeContext -c=configDvTest17","0 instance(s)"

@@ -1,0 +1,2 @@
+subName,description,nodes,command,expectedResultContains,expectedResultContainsDelete,directory,symbolicDirectory,ropInterval,waitTime
+RVTestActivePMIC1,DV Subscription for RVTestActivePMIC1,"$ManagedElementId19","cmedit get * NetworkElement.networkElementId==$ManagedElementId19,PMICScannerInfo","2 instance(s)","0 instance(s)","cd ../ericsson/pmic/pm1/XML/MeContext=","cd /ericsson/symvol/pmlinks1/lterbs/dir1/;ls","15",5000

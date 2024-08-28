@@ -1,0 +1,174 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Group01b_CM_CLI_Tests">
+    <test name="Login.">
+        <parameter name="user.uid" value="user1"></parameter>
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group01_CM_CLI_Tests. Login to apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="loginParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="build node data source">
+        <parameter name="groupNames" value=""></parameter>
+        <parameter name="numOfNodes" value="6"></parameter>
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.BuildDataSource" />
+        </classes>
+    </test>
+    <test name="Check that nodes do not exist.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group01_CM_CLI_Tests. Check node doesn't exist." />
+        <parameter name="commands.template.csv.file" value="node_not_exist_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Add nodes.">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-10" />
+        <parameter name="testTitle"
+            value="Group01_CM_CLI_Tests. TORF-507 CM Engineer Adds a Node using CM CLI." />
+        <parameter name="commands.template.csv.file" value="add_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.AddNodeTest" />
+        </classes>
+    </test>
+    <test name="Sync Nodes.">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-385" />
+        <parameter name="testTitle"
+            value="Group01_CM_CLI_Tests. TORF-9666 - CM Engineer performs Single Node Sync." />
+        <parameter name="commands.template.csv.file" value="sync_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.SyncNodeTest" />
+        </classes>
+    </test>
+    <test name="Set userLabel on ENodeBFunction">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group01_CM_CLI_Tests. Label to DVTest for ENodeBFunction. Prereq for later tests." />
+        <parameter name="commands.template.csv.file" value="set_user_label.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Set simple attribute based on FDN">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-124" />
+        <parameter name="testTitle"
+            value="Group01_CM_CLI_Tests. CM Engineer can Set / Modify a Simple CM Attribute based on a specified FDN TORF-1365." />
+        <parameter name="commands.template.csv.file" value="124_set_attribute.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Set structured complex attribute based on FDN">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-172" />
+        <parameter name="testTitle"
+            value="Group01_CM_CLI_Tests. CM Engineer can SET structured complex modeled CM data by FDN TORF-5305" />
+        <parameter name="commands.template.csv.file" value="172_set_complex_attribute.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Query Nodes.">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-78" />
+        <parameter name="testTitle"
+            value="Group01_CM_CLI_Tests. Network Engineer can query for all Nodes and Node Type via CM CLI TORF-6887." />
+        <parameter name="commands.template.csv.file" value="78_query_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Delete ENodeBFunction by FDN using the -ALL parameter.">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-330" />
+        <parameter name="testTitle"
+            value="Group01_CM_CLI_Tests. CM Engineer deletes an MOI by FDN using optional Parameter -ALL  TORF-690 TORF-9101." />
+        <parameter name="commands.template.csv.file" value="330_delete_moi_tree.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Delete ManagedElement by FDN using the -ALL parameter.">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-270" />
+        <parameter name="testTitle"
+            value="Group01_CM_CLI_Tests. CM Engineer deletes a Mib tree by FDN using the -ALL parameter TORF-9101/TORF-10209/ TORF-10202." />
+        <parameter name="commands.template.csv.file" value="270_delete_mib_tree.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Delete Nodes on wild card with attribute filter.">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-234" />
+        <parameter name="testTitle"
+            value="Group01_CM_CLI_Tests. CM Engineer Deletes all NEs based on a Wildcard NE id, Filtered by Specified Attributes TORF-1353" />
+        <parameter name="commands.template.csv.file"
+            value="234_delete_ne_wildcard_attribute_filter.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Query model service for an attribute of managed object.">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-217" />
+        <parameter name="testTitle"
+            value="Group01_CM_CLI_Tests. Network Engineer can view the description of 1 Attribute of modelled data TORF-6672." />
+        <parameter name="commands.template.csv.file"
+            value="217_describe_model_attribute_commands.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Delete nodes using -ALL param.">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group01_CM_CLI_Tests. Delete nodes using -ALL parameter." />
+        <parameter name="commands.template.csv.file" value="delete_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DeleteNodeTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Check that nodes do not exist after deleting nodes.">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group01_CM_CLI_Tests. Check node doesn't exist" />
+        <parameter name="commands.template.csv.file" value="node_not_exist_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Logout.">
+        <parameter name="user.uid" value="user1"></parameter>
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group01_CM_CLI_Tests. Logout of apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="logoutParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

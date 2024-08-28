@@ -1,0 +1,2 @@
+serverType,command,expectedOut,expectedExit,timeout
+ms1,service hyperic-server status,HQ Server is running,0,10000

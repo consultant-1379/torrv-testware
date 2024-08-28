@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ST_KPI_Network_Sync" preserve-order="true" parallel="false">
+    <test name="ST_KPI_Network_Sync">
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.stkpi.cases.NetworkSyncTest" />
+        </classes>
+    </test>
+    <test name="ST_KPI_Single_Node_Sync">
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.stkpi.cases.StKpiTest" />
+        </classes>
+    </test>
+</suite>

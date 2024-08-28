@@ -1,0 +1,2 @@
+subName,description,symbolicDirectory,symbolicLinkDeletionCheck
+RVTestActivePMIC1,DV Subscription for RVTestActivePMIC1,"cd /ericsson/symvol/pmlinks1/lterbs/dir1/;ls","cd /ericsson/3pp/jboss/standalone/log/; grep 'ConfigurationChangeListener, symbolicLinkDeletionIntervalInHours' server.log | tail -1"

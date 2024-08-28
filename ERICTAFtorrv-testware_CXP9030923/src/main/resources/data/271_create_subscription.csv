@@ -1,0 +1,2 @@
+subName,description,collectionName,searchCriteria,nodes,parentCounters,subCounters,ropInterval
+RVTestInactivePMIC1,"DV Subscription for RVTestInactivePMIC1",RVTestPMICCollection1,"NetworkElement","$ManagedElementId5,$ManagedElementId6,$ManagedElementId7,$ManagedElementId8,$ManagedElementId9","PlugInUnit,CapacityConnectedUsers","pmIfInBroadcastPkts,pmLicDlCapDistr,pmUeCtxtFetchAtt",15

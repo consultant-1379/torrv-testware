@@ -1,0 +1,6 @@
+command,expectedBodyContains
+"config create configDvTest18","Config successfully created"
+"config list","configDvTest18"
+"cmedit get * MeContext -c=configDvTest18","0 instance(s)"
+"cmedit create MeContext=DVTest18Node MeContextId=DVTest18Node, neType=ERBS, platformType=CPP -ns=OSS_TOP -version=3.0.0 -t -config=configDvTest18","1 instance(s) updated"
+"cmedit get * MeContext -c=configDvTest18","DVTest18Node"

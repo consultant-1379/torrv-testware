@@ -1,0 +1,2 @@
+command,expectedBodyContains
+"cmedit set MeContext=$ManagedElementId,ManagedElement=1,ENodeBFunction=1 userLabel=""DVTest""",1 instance(s) updated

@@ -1,0 +1,58 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Group09_Log_Viewer_Tests">
+    <test name="Login via Rest.">
+        <parameter name="user.uid" value="user1" />
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group09_Log_Viewer_Tests. Login to apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="loginParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Logviewer Advanced Search. UI.">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-587 Step 01" />
+        <parameter name="testTitle"
+            value="Group09_Log_Viewer_Tests. Perform advanced search for logs, DV_LOG_TORF7885 LogViewer" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.LogviewerTest">
+                <methods>
+                    <include name="testLogviewer" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Logviewer SearchSelectTime. UI.">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-587 Step 02" />
+        <parameter name="testTitle"
+            value="Group09_Log_Viewer_Tests. Perform advanced search for logs, select time." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.LogviewerTest">
+                <methods>
+                    <include name="testLogviewerSelectTime" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Logout.">
+        <parameter name="user.uid" value="user1" />
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group09_Log_Viewer_Tests. Logout of apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="logoutParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+

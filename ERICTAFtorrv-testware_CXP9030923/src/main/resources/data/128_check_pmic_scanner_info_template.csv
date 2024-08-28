@@ -1,0 +1,6 @@
+command,expectedBodyContains
+"cmedit get * NetworkElement.networkElementId==$ManagedElementId0, PMICScannerInfo","$ManagedElementId0"
+"cmedit get * NetworkElement.networkElementId==$ManagedElementId1, PMICScannerInfo","$ManagedElementId1"
+"cmedit get * NetworkElement.networkElementId==$ManagedElementId2, PMICScannerInfo","$ManagedElementId2"
+"cmedit get * NetworkElement.networkElementId==$ManagedElementId3, PMICScannerInfo","$ManagedElementId3"
+"cmedit get * NetworkElement.networkElementId==$ManagedElementId4, PMICScannerInfo","$ManagedElementId4"

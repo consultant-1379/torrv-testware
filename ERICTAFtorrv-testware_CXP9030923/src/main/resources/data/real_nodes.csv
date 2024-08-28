@@ -1,0 +1,3 @@
+ManagedElementId,ManagedElementModelVersion,ENodeBFunctionModelVersion,ERBSConnectivityInfoModelVersion,ipAddress,simulation,netsim,SecureUserName,SecureUserPassword,NormalUserName,NormalUserPassword,
+lienb0751,14.139.5,5.1.226,1.0.0,10.75.19.151,REAL_NODE,REAL_NODE,lienb0751,lienb0751,lienb0751,lienb0751,
+lienb0926,14.139.5,5.1.63,1.0.0,10.75.0.226,REAL_NODE,REAL_NODE,lienb0926,lienb0926,lienb0926,lienb0926,

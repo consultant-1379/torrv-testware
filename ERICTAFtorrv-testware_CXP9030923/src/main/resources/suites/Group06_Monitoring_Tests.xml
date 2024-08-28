@@ -1,0 +1,192 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Group06_Monitoring_Tests">
+    <test name="Create Test Users">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group06_Monitoring_Tests. Create Test Users" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.monitoring.cases.MonitoringUiTest">
+                <methods>
+                    <include name="createTestUsers" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Login into the Hyperic GUI via secure and unsecure ports">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-182" />
+        <parameter name="testTitle"
+            value="Group06_Monitoring_Tests. Login into the Hyperic GUI via secure and unsecure ports TORF-17031" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.monitoring.cases.MonitoringUiTest">
+                <methods>
+                    <include name="testSecureAndInsecureLogin" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Create Jboss Monitoring Alert">
+        <parameter name="user.uid" value="hqadmin" />
+        <parameter name="user.password" value="hqadmin" />
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-185" />
+        <parameter name="testTitle"
+            value="Group06_Monitoring_Tests. Create default JBOSS alert TORF-17031" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.monitoring.cases.MonitoringUiTest">
+                <methods>
+                    <include name="testCreateJbossMonitoringAlert" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Link an email address to an alert">
+        <parameter name="user.uid" value="hqadmin" />
+        <parameter name="user.password" value="hqadmin" />
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-187" />
+        <parameter name="testTitle"
+            value="Group06_Monitoring_Tests. Link an email address to an alert TORF-17031" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.monitoring.cases.MonitoringUiTest">
+                <methods>
+                    <include name="testLinkEmailAddressToAlert" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check Hyperic Server is running">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-98" />
+        <parameter name="testTitle"
+            value="Group06_Monitoring_Tests. Check Hyperic Server service is running on MS TORF-17031" />
+        <parameter name="commands.template.csv.file" value="98_hyperic_server_commands.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.monitoring.cases.MonitoringCliTest">
+                <methods>
+                    <include name="executeCliCommand" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check Hyperic Agents are running">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-99" />
+        <parameter name="testTitle"
+            value="Group06_Monitoring_Tests. Check Hyperic Agent services are running TORF-17031" />
+        <parameter name="commands.template.csv.file" value="99_hyperic_agent_commands.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.monitoring.cases.MonitoringCliTest">
+                <methods>
+                    <include name="executeCliCommand" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Verify DDC configured/running on MS">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-542" />
+        <parameter name="testTitle"
+            value="Group06_Monitoring_Tests. Verify DDC configured/running on MS TORF-17031" />
+        <parameter name="commands.template.csv.file" value="542_ddc_ms_commands.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.monitoring.cases.MonitoringCliTest">
+                <methods>
+                    <include name="executeCliCommand" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check NAS Monitoring Agent on SFS (Linux) server">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-194" />
+        <parameter name="testTitle"
+            value="Group06_Monitoring_Tests. Check NAS Monitoring Agent on SFS (Linux) server TORF-17031" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.monitoring.cases.MonitoringUiTest">
+                <methods>
+                    <include name="testAutoDiscovery" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test
+        name="Connect EMC VNX and ensure this is it auto discovered with availability status as Ok TORF-17031">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-189" />
+        <parameter name="testTitle"
+            value="Group06_Monitoring_Tests. Connect EMC VNX and ensure this is it auto discovered with availability status as Ok TORF-17031" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.monitoring.cases.MonitoringUiTest">
+                <methods>
+                    <include name="testEMC" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Test email alert generated when JBoss SU is locked">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-188" />
+        <parameter name="testTitle"
+            value="Group06_Monitoring_Tests. Test email alert generated when JBOSS SU is locked TORF-17031" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.monitoring.cases.MonitoringUiTest">
+                <methods>
+                    <include name="testLinkEmailToJBossAlert" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Servers are visible in the Hyperic GUI ">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-100" />
+        <parameter name="testTitle"
+            value="Group06_Monitoring_Tests. Servers are visible in the Hyperic GUI TORF-17031" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.monitoring.cases.MonitoringUiTest">
+                <methods>
+                    <include name="ServersVisibleInHyperic" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Test of hqadmin user change password across the system">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-190" />
+        <parameter name="testTitle"
+            value="Group06_Monitoring_Tests. Test of hqadmin user change password across the system TORF-17031" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.monitoring.cases.MonitoringUiTest">
+                <methods>
+                    <include name="testHqAdminChangePassword" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check HQ Health Status">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-193" />
+        <parameter name="testTitle" value="Group06_Monitoring_Tests. Check HQ Health Status TORF-17031" />
+        <classes>
+            <class
+                  name="com.ericsson.nms.rv.taf.test.monitoring.cases.MonitoringUiTest">
+                <methods>
+                    <include name="checkHQHealthStatus" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Delete Test Users">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group06_Monitoring_Tests. Delete Test Users" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.monitoring.cases.MonitoringUiTest">
+                <methods>
+                    <include name="deleteTestUsers" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,165 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Group04_SHM_Tests">
+    <test name="Login.">
+        <parameter name="user.uid" value="user1" />
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle" value="Group04_SHM_Tests. Login to apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="loginParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="build node data source">
+        <parameter name="groupNames" value="" />
+        <parameter name="numOfNodes" value="2" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.BuildDataSource">
+            </class>
+        </classes>
+    </test>
+    <test name="Pre-suite: Check that nodes do not exist.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group04_SHM_Tests. Check node doesn't exist." />
+        <parameter name="commands.template.csv.file" value="node_not_exist_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Add nodes.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle" value="Group04_SHM_Tests. Add node." />
+        <parameter name="commands.template.csv.file" value="add_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.AddNodeTest" />
+        </classes>
+    </test>
+    <test name="Sync Nodes.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle" value="Group04_SHM_Tests. Sync node." />
+        <parameter name="commands.template.csv.file" value="sync_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.SyncNodeTest">
+            </class>
+        </classes>
+    </test>
+    <test name="'Network Explorer' Create Collection"
+        preserve-order="true">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group04_SHM_Tests. Create Collection." />
+        <parameter name="data.csv.template" value="292_collection_for_shm.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorerCreateCollectionTest">
+                <methods>
+                    <include name="createCollection" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="View Hardware Inventory For CPP Node"
+        preserve-order="true">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-292" />
+        <parameter name="testTitle"
+            value="Group04_SHM_Tests. SHM_OPERATOR can View Hardware Inventory for CPP node TORF-6031" />
+        <parameter name="collection.name" value="292_208_461_shm.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.shm.cases.ShmUiLaunchTest">
+                <methods>
+                    <include name="shmHwUILauncher" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="View Software Inventory For CPP Node"
+        preserve-order="true">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-208" />
+        <parameter name="testTitle"
+            value="Group04_SHM_Tests. SHM_OPERATOR can View Software Inventory for a CPP node TORF-6030" />
+        <parameter name="collection.name" value="292_208_461_shm.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.shm.cases.ShmUiLaunchTest">
+                <methods>
+                    <include name="shmSwUILauncher" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="View Licence Inventory For CPP Node"
+        preserve-order="true">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-461" />
+        <parameter name="testTitle"
+            value="Group04_SHM_Tests. SHM_OPERATOR can View License Inventory using SHM GUI TORF-8466/10292/16726" />
+        <parameter name="collection.name" value="292_208_461_shm.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.shm.cases.ShmUiLaunchTest">
+                <methods>
+                    <include name="shmLicenceUILauncher" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="'Network Explorer' Delete Collection"
+        preserve-order="true">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group04_SHM_Tests. Delete a Collection." />
+        <parameter name="networkexplorer.delete.collection.csv.file"
+            value="292_collection_for_shm.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorerDeleteCollectionTest">
+                <methods>
+                    <include name="deleteCollection" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Delete nodes using -ALL param.">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle" value="Group04_SHM_Tests. Delete node" />
+        <parameter name="commands.template.csv.file" value="delete_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Post-suite: Check that nodes do not exist.">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group04_SHM_Tests. Check node doesn't exist" />
+        <parameter name="commands.template.csv.file" value="node_not_exist_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Logout.">
+        <parameter name="user.uid" value="user1" />
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle" value="Group04_SHM_Tests. Logout of apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="logoutParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

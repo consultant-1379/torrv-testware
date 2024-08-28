@@ -1,0 +1,6 @@
+command,expectedResult
+/pib/configurationService/updateConfigParameterValue?paramName=maxSymbolicLinkSubdirs&paramValue=10&serviceIdentifier=pm-service,10
+/pib/configurationService/updateConfigParameterValue?paramName=pmicSymbolicLinkCreationEnabled&paramValue=false&serviceIdentifier=pm-service,false
+/pib/configurationService/updateConfigParameterValue?paramName=pmicSymbolicLinkDeletionIntervalInMinutes&paramValue=13&serviceIdentifier=pm-service,13
+/pib/configurationService/updateConfigParameterValue?paramName=pmicSymbolicLinkDeletionIntervalInMinutes&paramValue=360&serviceIdentifier=pm-service,360
+/pib/configurationService/updateConfigParameterValue?paramName=pmicSymbolicLinkRetentionPeriodInMinutes&paramValue=1440&serviceIdentifier=pm-service,1440

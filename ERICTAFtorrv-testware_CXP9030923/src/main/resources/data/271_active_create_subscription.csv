@@ -1,0 +1,2 @@
+subName,description,collectionName,searchCriteria,nodes,parentCounters,subCounters,ropInterval
+RVTestActivePMIC1,DV Subscription for RVTestActivePMIC1,RVTestActivePMICCollection1,NetworkElement,"$ManagedElementId10,$ManagedElementId11,$ManagedElementId12,$ManagedElementId13,$ManagedElementId14,$ManagedElementId15,$ManagedElementId16,$ManagedElementId17,$ManagedElementId18","CapacityConnectedUsers,MceFunction","pmLicDlCapDistr,pmLicDlCapLicense,pmHoPrepSuccLteInterFMbms","15"

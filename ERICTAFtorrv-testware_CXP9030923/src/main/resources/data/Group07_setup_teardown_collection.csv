@@ -1,0 +1,3 @@
+collectionName,query,managedElementIdList,category
+RVTestPMICCollection1,NetworkElement,"$ManagedElementId0,$ManagedElementId1,$ManagedElementId2,$ManagedElementId3,$ManagedElementId4",Private
+RVTestPMICCollection2,NetworkElement,"$ManagedElementId1,$ManagedElementId2",Private

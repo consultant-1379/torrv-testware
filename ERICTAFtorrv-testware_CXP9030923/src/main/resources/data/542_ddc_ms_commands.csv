@@ -1,0 +1,34 @@
+serverType,command,expectedOut,expectedExit,timeout
+ms1,service ddc status,is running,0,10000
+ms1,crontab -l | grep -i ddc,START,0,10000
+ms1,crontab -l | grep -i ddc,STOP,0,10000
+ms1,crontab -l | grep -i ddc,TRIGGER,0,10000
+ms1,ls /var/ericsson/ddc_data/ | grep config,config,0,10000
+ms1,ls /var/ericsson/ddc_data/ | grep lost+found,lost+found,0,10000
+ms1,temp=$(hostname); ls /var/ericsson/ddc_data/ | grep $temp,_TOR,0,10000
+ms1,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep agentserver.log,agentserver.log,0,10000
+ms1,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep exclude.txt,exclude.txt,0,10000
+ms1,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep excludes.txt,excludes.txt,0,10000
+ms1,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep ddp.txt,ddp.txt,0,10000
+ms1,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep cron.log,cron.log,0,10000
+ms1,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep tor_nodes.txt,tor_nodes.txt,0,10000
+ms1,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep tor_servers,tor_servers,0,10000
+ms1,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep instr.trigger,instr.trigger,0,10000
+ms1,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); cd /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate ; find ./ -name server,server,0,10000
+ms1,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); cd /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate ; find ./ -name TOR,TOR,0,10000
+sc1,temp=$(hostname); ls /var/ericsson/ddc_data/ | grep $temp,_TOR,0,10000
+sc1,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep exclude.txt,exclude.txt,0,10000
+sc1,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep excludes.txt,excludes.txt,0,10000
+sc1,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep ddp.txt,ddp.txt,0,10000
+sc1,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep cron.log,cron.log,0,10000
+sc1,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep tor_nodes.txt,tor_nodes.txt,0,10000
+sc1,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); cd /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate ; find ./ -name server,server,0,10000
+sc1,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); cd /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate ; find ./ -name TOR,TOR,0,10000
+sc2,temp=$(hostname); ls /var/ericsson/ddc_data/ | grep $temp,_TOR,0,10000
+sc2,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep exclude.txt,exclude.txt,0,10000
+sc2,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep excludes.txt,excludes.txt,0,10000
+sc2,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep ddp.txt,ddp.txt,0,10000
+sc2,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep cron.log,cron.log,0,10000
+sc2,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); ls /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate | grep tor_nodes.txt,tor_nodes.txt,0,10000
+sc2,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); cd /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate ; find ./ -name server,server,0,10000
+sc2,tempDate=`date +%d%m%y` ; tempHostname=$(hostname); cd /var/ericsson/ddc_data/$tempHostname'_TOR'/$tempDate ; find ./ -name TOR,TOR,0,10000

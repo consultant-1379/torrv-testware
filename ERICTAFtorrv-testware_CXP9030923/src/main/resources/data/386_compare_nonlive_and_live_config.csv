@@ -1,0 +1,3 @@
+command,expectedBodyContains
+"cmedit set MeContext=$ManagedElementId1,ManagedElement=1 userLabel=Test386 -c=configDvTest386","1 instance(s) updated"
+"config diff configDvTest386 Live --limit $ManagedElementId1 --detail attr -i","userLabel"

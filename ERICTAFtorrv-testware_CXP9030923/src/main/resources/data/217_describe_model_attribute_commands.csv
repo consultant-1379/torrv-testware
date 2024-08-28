@@ -1,0 +1,4 @@
+command,expectedBodyContains
+cmedit describe MeContext.neType,MeContext.neType
+cmedit describe ManagedElement.healthCheckResult,ManagedElement.healthCheckResult
+cmedit describe ENodeBFunction.timePhaseMaxDeviation,ENodeBFunction.timePhaseMaxDeviation

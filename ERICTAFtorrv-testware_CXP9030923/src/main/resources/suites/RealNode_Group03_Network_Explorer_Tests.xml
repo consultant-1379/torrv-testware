@@ -1,0 +1,320 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Group03_Network_Explorer_Tests">
+    <test name="Login via Rest.">
+        <parameter name="user.uid" value="user1" />
+        <!--<parameter name="user.password" value="test"></parameter> -->
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. Login to apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="loginParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Login via UI.">
+        <parameter name="user.uid" value="user1" />
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. Login to apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheUiLoginLogoutTest">
+                <methods>
+                    <include name="loginParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="build node data source">
+        <parameter name="groupNames" value="" />
+        <parameter name="numOfNodes" value="2" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.BuildDataSource">
+            </class>
+        </classes>
+    </test>
+    <test name="Pre-suite: Check that nodes do not exist.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. Check node doesn't exist" />
+        <parameter name="commands.template.csv.file" value="node_not_exist_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Add nodes.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. Add node" />
+        <parameter name="commands.template.csv.file" value="add_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.AddNodeTest" />
+        </classes>
+    </test>
+    <test name="Sync Nodes.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. Sync node" />
+        <parameter name="commands.template.csv.file" value="sync_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.SyncNodeTest">
+            </class>
+        </classes>
+    </test>
+    <test name="'Network Explorer' Create Collection">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-59 Step 01" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. Create Collection. A Network, CM,  NOC or Line Support Engineer can Search, Save and Create a collection TORF-4730." />
+        <parameter name="data.csv.template" value="59_409_networkExplorer.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorerCreateCollectionTest">
+                <methods>
+                    <include name="createCollection" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="'Network Explorer' Get Collection">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-59 Step 02" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. Query Collection. A Network, CM,  NOC or Line Support Engineer can Search, Save and Create a collection TORF-4730." />
+        <parameter name="networkexplorer.get.collection.csv.file"
+            value="59_409_networkExplorer.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorerGetCollectionTest">
+                <methods>
+                    <include name="getCollection" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="'Network Explorer' create Search">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-63 Step 01" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. Create Search. A Network, CM, NOC, Line Support Engineer can Search for and Save a Search - TORF-720." />
+        <parameter name="data.csv.template" value="410_create_search.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorerCreateSearchTest" />
+        </classes>
+    </test>
+    <test name="'Network Explorer' get search" preserve-order="true">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-63 Step 02" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. Query Search. A Network, CM, NOC, Line Support Engineer can Search for and Save a Search - TORF-720." />
+        <parameter name="data.csv.template" value="410_create_search.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorerGetSearchTest" />
+        </classes>
+    </test>
+    <test name="Verify intersecting two different collections.">
+        <parameter name="collectionA" value="TORRV_3789_Collection_1" />
+        <parameter name="collectionB" value="TORRV_3789_Collection_2" />
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-537" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. Intersecting different Collections." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorer">
+                <methods>
+                    <include name="testIntersectingDifferentSavedCollections" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Verify intersecting two different searches.">
+        <parameter name="searchA" value="TORRV_3790_Search_01" />
+        <parameter name="searchB" value="TORRV_3790_Search_11" />
+        <parameter name="testId" value="TORRV-3790:567" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. Intersecting different Searches." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorer">
+                <methods>
+                    <include name="testIntersectingDifferentSavedSearches" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Favourites a Collection">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-239" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. A Network, CM, NOC or Line Support Engineer Favourites a Collection TORF-4728" />
+        <parameter name="favorite" value="FavoriteCollection_testware" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorerFavorite">
+                <methods>
+                    <include name="testCollectionFavorite" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Favourites a Search">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-241" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. A Network, CM, NOC or Line Support Engineer Favourites a Saved Search TORF-6311" />
+        <parameter name="favorite" value="FavoriteSearch_testware" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorerFavorite">
+                <methods>
+                    <include name="testSearchFavorite" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="create a collection using criteria builder"
+        preserve-order="true">
+        <parameter name="collectionName" value="criteriaBuilder_collection" />
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-390 Step 01" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. UI version. Create a collection through criteria builder." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorerQueryBuilder">
+                <methods>
+                    <include name="testQueryBuilderCollection" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="create a search using criteria builder"
+        preserve-order="true">
+        <parameter name="collectionName" value="criteriaBuilder_search" />
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-390 Step 02" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. UI version. Create a search through criteria builder." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorerQueryBuilder">
+                <methods>
+                    <include name="testQueryBuilderSearch" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Delete collection created by criteria builder">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-390 Step 03" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. Delete a Collection created by criteria builder" />
+        <parameter name="networkexplorer.delete.collection.csv.file"
+            value="390_criteria_builder_collection.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorerDeleteCollectionTest">
+                <methods>
+                    <include name="deleteCollection" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Delete search created by critieria builder"
+        preserve-order="true">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-390 Step 04" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. Delete search created by criteria builder." />
+        <parameter name="networkexplorer.delete.search.csv.file"
+            value="390_criteria_builder_search.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorerDeleteSearchTest" />
+        </classes>
+    </test>
+
+    <test name="'Network Explorer' Delete Collection">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-409" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. Delete a Collection. A Network, CM, NOC or Line Support Engineer can Delete a Collection TORF-723" />
+        <parameter name="networkexplorer.delete.collection.csv.file"
+            value="59_409_networkExplorer.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorerDeleteCollectionTest">
+                <methods>
+                    <include name="deleteCollection" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="'Network Explorer' delete search" preserve-order="true">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-410" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. A Network CM, NOC, Line Support Engineer can Delete a Saved Search TORF-6315." />
+        <parameter name="networkexplorer.delete.search.csv.file"
+            value="410_create_search.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorerDeleteSearchTest" />
+        </classes>
+    </test>
+
+    <test name="Delete nodes using -ALL param.">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. Delete node" />
+        <parameter name="commands.template.csv.file" value="delete_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DeleteNodeTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Post-suite: Check that nodes do not exist.">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. Check node doesn't exist" />
+        <parameter name="commands.template.csv.file" value="node_not_exist_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Logout Ui.">
+        <parameter name="user.uid" value="user1"></parameter>
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. UI logout of apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheUiLoginLogoutTest">
+                <methods>
+                    <include name="logoutParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Logout.">
+        <parameter name="user.uid" value="user1" />
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group03_Network_Explorer_Tests. Logout of apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="logoutParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

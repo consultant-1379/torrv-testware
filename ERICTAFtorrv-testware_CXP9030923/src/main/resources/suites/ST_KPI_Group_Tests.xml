@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ST_KPI_Group_Tests" preserve-order="true" parallel="false">
+    <test name="Alarm should get displayed in GUI within 10 seconds of being sent">
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.stkpi.cases.StKpiFmTests">
+                <methods>
+                    <include name="fmAlarmReportingToGui" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Alarm Reporting to NMS, within 5 Seconds">
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.stkpi.cases.StKpiFmTests">
+                <methods>
+                    <include name="fmAlarmReportingToNms" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ST_STKPI_PM_01 LTE Counters Northbound">
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.stkpi.cases.StKpiPMTest">
+                <methods>
+                    <include name="pmNorthBoundCounters" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,2 @@
+subName,newDescription,nodesToDelete,ropIntervals,collectionName,searchCriteria,nodesToAdd,parentCounters,subCounters
+RVTestInactivePMIC1,New description for RVTestInactivePMIC1,"$ManagedElementId1,$ManagedElementId2,$ManagedElementId3,$ManagedElementId4,$ManagedElementId5","15",RVTestPMICCollection2,NetworkElement,"$ManagedElementId3,$ManagedElementId4","ENodeBFunction,EUtranCellTDD","pmHoExeSuccCsfb,pmZtemporary42,pmLbQualifiedUe"

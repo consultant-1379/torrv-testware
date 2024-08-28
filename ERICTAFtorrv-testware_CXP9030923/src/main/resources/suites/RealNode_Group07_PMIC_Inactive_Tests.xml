@@ -1,0 +1,179 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Group07_PMIC_Inactive_Tests">
+    <test name="Login Rest.">
+        <parameter name="user.uid" value="user1"></parameter>
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group07_PMIC_Inactive_Tests. Login to apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="loginParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="build node data source">
+        <parameter name="groupNames" value=""></parameter>
+        <parameter name="numOfNodes" value="10"></parameter>
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.BuildDataSource" />
+        </classes>
+    </test>
+    <test name="Check that nodes do not exist.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group07_PMIC_Inactive_Tests. Check node doesn't exist." />
+        <parameter name="commands.template.csv.file" value="node_not_exist_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Add nodes.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group07_PMIC_Inactive_Tests. Adds a node." />
+        <parameter name="commands.template.csv.file" value="add_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.AddNodeTest" />
+        </classes>
+    </test>
+    <test name="Sync Nodes.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group07_PMIC_Inactive_Tests. Sync a node." />
+        <parameter name="commands.template.csv.file" value="sync_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.SyncNodeTest" />
+        </classes>
+    </test>
+    <test name="'Network Explorer' Create Collection">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group07_PMIC_Inactive_Tests. Create Collection." />
+        <parameter name="data.csv.template"
+            value="Group07_setup_teardown_collection.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorerCreateCollectionTest">
+                <methods>
+                    <include name="createCollection" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- UI Code Start -->
+    <test name="Login UI.">
+        <parameter name="user.uid" value="user1"></parameter>
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group07_PMIC_Inactive_Tests. Login to apache via UI." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheUiLoginLogoutTest">
+                <methods>
+                    <include name="loginParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Create and List Statistical Subscriptions.">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-635" />
+        <parameter name="testTitle"
+            value="Group07_PMIC_Inactive_Tests. Create and List Statistical Subscriptions." />
+        <parameter name="pmic.create.ui.subscription" value="271_create_subscription.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.pmic.cases.CreateSubscription_AddNodes_SelectCountersAndSetScheduleUiTest" />
+        </classes>
+    </test>
+    <test name="Update an inactive subscription.">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-637" />
+        <parameter name="testTitle"
+            value="Group07_PMIC_Inactive_Tests. Update an inactive subscription." />
+        <parameter name="pmic.update.ui.subscription" value="271_update_subscription.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.pmic.cases.UpdateSubscriptionUiTest" />
+        </classes>
+    </test>
+    <test name="Delete an inactive subscription">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-638" />
+        <parameter name="testTitle"
+            value="Group07_PMIC_Inactive_Tests. Delete an inactive subscription." />
+        <parameter name="pmic.delete.ui.subscription" value="271_create_subscription.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.pmic.cases.DeleteSubscriptionUiTest" />
+        </classes>
+    </test>
+    <test name="Logout Ui.">
+        <parameter name="user.uid" value="user1"></parameter>
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group07_PMIC_Inactive_Tests. Logout of apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheUiLoginLogoutTest">
+                <methods>
+                    <include name="logoutParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- UI Code End -->
+    <test name="'Network Explorer' Delete Collection"
+        preserve-order="true">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group07_PMIC_Inactive_Tests. Delete a Collection" />
+        <parameter name="networkexplorer.delete.collection.csv.file"
+            value="Group07_setup_teardown_collection.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.NetworkExplorerDeleteCollectionTest" />
+        </classes>
+    </test>
+    <test name="Delete nodes using -ALL param.">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group07_PMIC_Inactive_Tests. Delete nodes using -ALL parameter." />
+        <parameter name="commands.template.csv.file" value="delete_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DeleteNodeTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Check that nodes do not exist after deleting nodes.">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group07_PMIC_Inactive_Tests. Check node doesn't exist" />
+        <parameter name="commands.template.csv.file" value="node_not_exist_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Logout Rest.">
+        <parameter name="user.uid" value="user1"></parameter>
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group07_PMIC_Inactive_Tests. Logout of apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="logoutParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

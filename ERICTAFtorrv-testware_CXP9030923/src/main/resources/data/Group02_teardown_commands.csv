@@ -1,0 +1,7 @@
+command,expectedBodyContains
+"config delete configDvTest17"," "
+"config delete configDvTest18"," "
+"config delete configDvTest19"," "
+"config delete configDvTest386"," "
+"config delete configDvTest473a"," "
+"config delete configDvTest473b"," "

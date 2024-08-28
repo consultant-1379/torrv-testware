@@ -1,0 +1,6 @@
+command,expectedBodyContains
+"cmedit create MeContext=$ManagedElementId MeContextId=$ManagedElementId, neType=ERBS, platformType=CPP -ns=OSS_TOP -version=3.0.0","1 instance(s) updated"
+"cmedit create NetworkElement=$ManagedElementId networkElementId=$ManagedElementId, neType=ERBS, platformType=CPP, ossModelIdentity=""$OssModelIdentity"", ossPrefix=""MeContext=$ManagedElementId"" -ns=OSS_NE_DEF -version=2.0.0","1 instance(s) updated"
+"cmedit create NetworkElement=$ManagedElementId,CppConnectivityInformation=1 CppConnectivityInformationId=1, ipAddress=""$ipAddress"", port=80 -ns=CPP_MED -version=1.0.0","1 instance(s) updated"
+"cmedit get * NetworkElement.networkElementId==$ManagedElementId,*",
+"secadm credentials create --rootusername root --rootuserpassword dummy --secureusername $SecureUserName --secureuserpassword $SecureUserPassword --normalusername $NormalUserName --normaluserpassword $NormalUserPassword -n $ManagedElementId","All credentials were created successfully"

@@ -1,0 +1,7 @@
+command,expectedBodyContains
+"config list","configDvTest17"
+"config list","configDvTest18"
+"config list","configDvTest19"
+"cmedit get * MeContext -c=configDvTest17","2 instance(s)"
+"cmedit get * MeContext -c=configDvTest18","DVTest18Node"
+"cmedit get * MeContext -c=configDvTest19","2 instance(s)"

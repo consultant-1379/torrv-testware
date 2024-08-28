@@ -1,0 +1,5 @@
+collectionName,query,managedElementIdList,category
+Coll_rvtestuser01,NetworkElement,$ManagedElementId0,Private
+TORRV_3789_Collection_1,NetworkElement,$ManagedElementId0,Private
+TORRV_3789_Collection_2,NetworkElement,"$ManagedElementId0,$ManagedElementId1",Private
+FavoriteCollection_testware,NetworkElement,$ManagedElementId0,Private

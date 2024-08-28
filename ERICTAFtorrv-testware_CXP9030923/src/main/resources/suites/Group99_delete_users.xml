@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- 'Network Explorer' test suite -->
+<suite name="Group99_delete_users">
+    <test name="Delete Users.">
+        <parameter name="testId" value="TearDown Step" />
+        <parameter name="testTitle" value="Delete Users" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.security.cases.DeleteUser">
+            </class>
+        </classes>
+    </test>
+</suite>

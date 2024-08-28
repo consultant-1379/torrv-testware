@@ -1,0 +1,140 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Group05_Topology_Browser_Tests">
+    <test name="build node data source">
+        <parameter name="groupNames" value="" />
+        <parameter name="numOfNodes" value="1" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.BuildDataSource">
+            </class>
+        </classes>
+    </test>
+    <test name="Login via Rest.">
+        <parameter name="user.uid" value="user1" />
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group05_Topology_Browser_Tests. Login to apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="loginParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Pre-suite: Check that nodes do not exist.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group05_Topology_Browser_Tests. Check node doesn't exist" />
+        <parameter name="commands.template.csv.file" value="node_not_exist_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Add nodes.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group05_Topology_Browser_Tests. Add node" />
+        <parameter name="commands.template.csv.file" value="add_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.AddNodeTest" />
+        </classes>
+    </test>
+    <test name="Sync Nodes.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group05_Topology_Browser_Tests. Sync node" />
+        <parameter name="commands.template.csv.file" value="sync_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.SyncNodeTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Set userLabel.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group05_Topology_Browser_Tests. Set userLabel on ManagedElement." />
+        <parameter name="commands.template.csv.file" value="408_set_userLabel_attribute.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Login via UI.">
+        <parameter name="user.uid" value="user1" />
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group05_Topology_Browser_Tests. Login to apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheUiLoginLogoutTest">
+                <methods>
+                    <include name="loginParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Edit an Attribute in Topology Browser">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-408"/>
+        <parameter name="testTitle" value="Group05_Topology_Browser_Tests. Edit an Attribute in Topology Browser."/>
+        <parameter name="topology.browser.data" value="408_topologyBrowser.csv"/>
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.networkexplorer.cases.TopologyBrowserTest"/>
+        </classes>
+    </test> 
+    <test name="Logout Ui.">
+        <parameter name="user.uid" value="user1"></parameter>
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group05_Topology_Browser_Tests. UI logout of apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheUiLoginLogoutTest">
+                <methods>
+                    <include name="logoutParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Delete nodes using -ALL param.">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group05_Topology_Browser_Tests. Delete node" />
+        <parameter name="commands.template.csv.file" value="delete_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DeleteNodeTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Post-suite: Check that nodes do not exist.">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group05_Topology_Browser_Tests. Check node doesn't exist" />
+        <parameter name="commands.template.csv.file" value="node_not_exist_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Logout.">
+        <parameter name="user.uid" value="user1" />
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group05_Topology_Browser_Tests. Logout of apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="logoutParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

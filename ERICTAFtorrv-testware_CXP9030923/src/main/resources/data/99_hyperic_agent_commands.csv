@@ -1,0 +1,4 @@
+serverType,command,expectedOut,expectedExit,timeout
+ms1,service hyperic-agent status,HQ Agent is running,0,10000
+sc1,service hyperic-agent status,HQ Agent is running,0,10000
+sc2,service hyperic-agent status,HQ Agent is running,0,10000

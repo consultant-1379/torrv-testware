@@ -1,0 +1,5 @@
+command,expectedBodyContains
+"cmedit get MeContext=$ManagedElementId","1 instance(s)"
+"cmedit get NetworkElement=$ManagedElementId","1 instance(s)"
+"cmedit get NetworkElement=$ManagedElementId,CppConnectivityInformation=1","1 instance(s)"
+"cmedit get NetworkElement=$ManagedElementId,CmFunction=1","1 instance(s)"

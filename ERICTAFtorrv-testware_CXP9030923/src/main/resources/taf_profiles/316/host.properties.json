@@ -1,0 +1,4417 @@
+[
+  {
+    "hostname": "ms1",
+    "ip": "141.137.244.10",
+    "ports": {
+      "ssh": 22
+    },
+    "type": "ms",
+    "users": [
+      {
+        "password": "12shroot",
+        "type": "admin",
+        "username": "root"
+      }
+    ]
+  },
+  {
+    "hostname": "svc1",
+    "interfaces": [
+      {
+        "hostname": null,
+        "ipv4": "141.137.244.7",
+        "ipv6": "None",
+        "ports": {
+          "ssh": 22
+        },
+        "type": "public"
+      },
+      {
+        "hostname": null,
+        "ipv4": "10.247.246.3",
+        "ipv6": "None",
+        "ports": {
+          "ssh": 22
+        },
+        "type": "internal"
+      },
+      {
+        "hostname": null,
+        "ipv4": "10.144.1.8",
+        "ipv6": "None",
+        "ports": {
+          "ssh": 22
+        },
+        "type": "backup"
+      },
+      {
+        "hostname": null,
+        "ipv4": null,
+        "ipv6": null,
+        "ports": {
+          "ssh": 22
+        },
+        "type": "multicast"
+      }
+    ],
+    "nodes": [
+      {
+        "group": "fmserv",
+        "hostname": "fmserv_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.88",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.48",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "pmserv",
+        "hostname": "pmserv_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.59",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.19",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "cmserv",
+        "hostname": "cmserv_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.63",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.23",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "shmserv",
+        "hostname": "shmserv_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.94",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.54",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "netex",
+        "hostname": "netex_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.65",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.25",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "uiserv",
+        "hostname": "uiserv_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.67",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.27",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "secserv",
+        "hostname": "secserv_1",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-2",
+            "ipv4": "141.137.244.12",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.69",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.29",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "mscm",
+        "hostname": "mscm_1",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-4",
+            "ipv4": "141.137.244.14",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.71",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.31",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "msfm",
+        "hostname": "msfm_1",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-14",
+            "ipv4": "141.137.244.24",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.84",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.44",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "mspm",
+        "hostname": "mspm_1",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-8",
+            "ipv4": "141.137.244.18",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.75",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.35",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "sso",
+        "hostname": "sso_0",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.79",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.39",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 0,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "impexpserv",
+        "hostname": "impexpserv_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.92",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.52",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "kpiserv",
+        "hostname": "kpiserv_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.105",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.65",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "apserv",
+        "hostname": "apserv_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.107",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.67",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "logstash",
+        "hostname": "logstash_0",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.51",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.11",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "httpd",
+        "unit": 0,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "openidm",
+        "hostname": "openidm_0",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.52",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.12",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "httpd",
+        "unit": 0,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "medrouter",
+        "hostname": "medrouter_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.53",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.13",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "eventbasedclient",
+        "hostname": "eventbasedclient_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.57",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.17",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "jms",
+        "hostname": "jms_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.80",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.40",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "nbalarmirp",
+        "hostname": "nbalarmirp_1",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-18",
+            "ipv4": "141.137.244.28",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.90",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.50",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "visinamingnb",
+        "hostname": "visinamingnb_0",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": "141.137.244.22",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.82",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.42",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "httpd",
+        "unit": 0,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "supervc",
+        "hostname": "supervc_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.55",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.15",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "solr",
+        "hostname": "solr_0",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.96",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.56",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "httpd",
+        "unit": 0,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "sps",
+        "hostname": "sps_1",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-20",
+            "ipv4": "141.137.244.30",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.109",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.69",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "haproxy",
+        "hostname": "haproxy_0",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-1",
+            "ipv4": "ieatENM5316-1.athtem.eei.ericsson.se",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.50",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.10",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "httpd",
+        "unit": 0,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "lcmserv",
+        "hostname": "lcmserv_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.101",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.61",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "wpserv",
+        "hostname": "wpserv_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.103",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.63",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "visinamingsb",
+        "hostname": "visinamingsb_0",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": "141.137.244.23",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.83",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.43",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "httpd",
+        "unit": 0,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "httpd",
+        "hostname": "httpd_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.97",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.57",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "httpd",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "amos",
+        "hostname": "amos_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": "141.137.244.32",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.111",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.71",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "scripting",
+        "hostname": "scripting_1",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-24",
+            "ipv4": "141.137.244.252",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.113",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.73",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "comecimpolicy",
+        "hostname": "comecimpolicy_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.222",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.83",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "bnsiserv",
+        "hostname": "bnsiserv_1",
+        "interfaces": [
+          {
+            "hostname": "316",
+            "ipv4": "141.137.245.244",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.224",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.84",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "said",
+        "hostname": "said_1",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.223",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.85",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 1,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      }
+    ],
+    "ports": {
+      "ssh": 22
+    },
+    "type": "svc1",
+    "users": [
+      {
+        "password": "12shroot",
+        "type": "admin",
+        "username": "litp-admin"
+      }
+    ]
+  },
+  {
+    "hostname": "svc2",
+    "interfaces": [
+      {
+        "hostname": null,
+        "ipv4": "141.137.244.8",
+        "ipv6": "None",
+        "ports": {
+          "ssh": 22
+        },
+        "type": "public"
+      },
+      {
+        "hostname": null,
+        "ipv4": "10.247.246.4",
+        "ipv6": "None",
+        "ports": {
+          "ssh": 22
+        },
+        "type": "internal"
+      },
+      {
+        "hostname": null,
+        "ipv4": "10.144.1.11",
+        "ipv6": "None",
+        "ports": {
+          "ssh": 22
+        },
+        "type": "backup"
+      },
+      {
+        "hostname": null,
+        "ipv4": null,
+        "ipv6": null,
+        "ports": {
+          "ssh": 22
+        },
+        "type": "multicast"
+      }
+    ],
+    "nodes": [
+      {
+        "group": "fmserv",
+        "hostname": "fmserv_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.89",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.49",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "pmserv",
+        "hostname": "pmserv_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.60",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.20",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "cmserv",
+        "hostname": "cmserv_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.64",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.24",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "shmserv",
+        "hostname": "shmserv_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.95",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.55",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "netex",
+        "hostname": "netex_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.66",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.26",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "uiserv",
+        "hostname": "uiserv_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.68",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.28",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "secserv",
+        "hostname": "secserv_2",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-3",
+            "ipv4": "141.137.244.13",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.70",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.30",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "mscm",
+        "hostname": "mscm_2",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-5",
+            "ipv4": "141.137.244.15",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.72",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.32",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "msfm",
+        "hostname": "msfm_2",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-15",
+            "ipv4": "141.137.244.25",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.85",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.45",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "mspm",
+        "hostname": "mspm_2",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-9",
+            "ipv4": "141.137.244.19",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.76",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.36",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "impexpserv",
+        "hostname": "impexpserv_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.93",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.53",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "kpiserv",
+        "hostname": "kpiserv_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.106",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.66",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "apserv",
+        "hostname": "apserv_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.108",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.68",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "medrouter",
+        "hostname": "medrouter_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.54",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.14",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "eventbasedclient",
+        "hostname": "eventbasedclient_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.58",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.18",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "jms",
+        "hostname": "jms_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.81",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.41",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "nbalarmirp",
+        "hostname": "nbalarmirp_2",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-19",
+            "ipv4": "141.137.244.29",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.91",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.51",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "supervc",
+        "hostname": "supervc_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.56",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.16",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "sps",
+        "hostname": "sps_2",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-21",
+            "ipv4": "141.137.244.31",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.110",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.70",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "lcmserv",
+        "hostname": "lcmserv_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.102",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.62",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "wpserv",
+        "hostname": "wpserv_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.104",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.64",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "httpd",
+        "hostname": "httpd_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.98",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.58",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "httpd",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "amos",
+        "hostname": "amos_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": "141.137.244.33",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.112",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.72",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "scripting",
+        "hostname": "scripting_2",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-25",
+            "ipv4": "141.137.244.253",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.114",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.74",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "comecimpolicy",
+        "hostname": "comecimpolicy_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.225",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.86",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "bnsiserv",
+        "hostname": "bnsiserv_2",
+        "interfaces": [
+          {
+            "hostname": "316",
+            "ipv4": "141.137.245.245",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.226",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.87",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "said",
+        "hostname": "said_2",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.227",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.88",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 2,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      }
+    ],
+    "ports": {
+      "ssh": 22
+    },
+    "type": "svc2",
+    "users": [
+      {
+        "password": "12shroot",
+        "type": "admin",
+        "username": "litp-admin"
+      }
+    ]
+  },
+  {
+    "hostname": "db1",
+    "interfaces": [
+      {
+        "hostname": null,
+        "ipv4": null,
+        "ipv6": null,
+        "ports": {
+          "ssh": 22
+        },
+        "type": "public"
+      },
+      {
+        "hostname": null,
+        "ipv4": "10.247.246.5",
+        "ipv6": "None",
+        "ports": {
+          "ssh": 22
+        },
+        "type": "internal"
+      },
+      {
+        "hostname": null,
+        "ipv4": "10.144.1.12",
+        "ipv6": "None",
+        "ports": {
+          "ssh": 22
+        },
+        "type": "backup"
+      },
+      {
+        "hostname": null,
+        "ipv4": null,
+        "ipv6": null,
+        "ports": {
+          "ssh": 22
+        },
+        "type": "multicast"
+      }
+    ],
+    "nodes": [],
+    "ports": {
+      "ssh": 22
+    },
+    "type": "db1",
+    "users": [
+      {
+        "password": "12shroot",
+        "type": "admin",
+        "username": "litp-admin"
+      }
+    ]
+  },
+  {
+    "hostname": "svc3",
+    "interfaces": [
+      {
+        "hostname": null,
+        "ipv4": "141.137.244.4",
+        "ipv6": "None",
+        "ports": {
+          "ssh": 22
+        },
+        "type": "public"
+      },
+      {
+        "hostname": null,
+        "ipv4": "10.247.246.6",
+        "ipv6": "None",
+        "ports": {
+          "ssh": 22
+        },
+        "type": "internal"
+      },
+      {
+        "hostname": null,
+        "ipv4": "10.144.1.5",
+        "ipv6": "None",
+        "ports": {
+          "ssh": 22
+        },
+        "type": "backup"
+      },
+      {
+        "hostname": null,
+        "ipv4": null,
+        "ipv6": null,
+        "ports": {
+          "ssh": 22
+        },
+        "type": "multicast"
+      }
+    ],
+    "nodes": [
+      {
+        "group": "mscm",
+        "hostname": "mscm_3",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-6",
+            "ipv4": "141.137.244.16",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.73",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.33",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 3,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "pmserv",
+        "hostname": "pmserv_3",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.61",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.21",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 3,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "mspm",
+        "hostname": "mspm_3",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-10",
+            "ipv4": "141.137.244.20",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.77",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.37",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 3,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "httpd",
+        "hostname": "httpd_3",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.99",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.59",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "httpd",
+        "unit": 3,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "msfm",
+        "hostname": "msfm_3",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-16",
+            "ipv4": "141.137.244.26",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.86",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.46",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 3,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      }
+    ],
+    "ports": {
+      "ssh": 22
+    },
+    "type": "svc3",
+    "users": [
+      {
+        "password": "12shroot",
+        "type": "admin",
+        "username": "litp-admin"
+      }
+    ]
+  },
+  {
+    "hostname": "svc4",
+    "interfaces": [
+      {
+        "hostname": null,
+        "ipv4": "141.137.244.5",
+        "ipv6": "None",
+        "ports": {
+          "ssh": 22
+        },
+        "type": "public"
+      },
+      {
+        "hostname": null,
+        "ipv4": "10.247.246.7",
+        "ipv6": "None",
+        "ports": {
+          "ssh": 22
+        },
+        "type": "internal"
+      },
+      {
+        "hostname": null,
+        "ipv4": "10.144.1.6",
+        "ipv6": "None",
+        "ports": {
+          "ssh": 22
+        },
+        "type": "backup"
+      },
+      {
+        "hostname": null,
+        "ipv4": null,
+        "ipv6": null,
+        "ports": {
+          "ssh": 22
+        },
+        "type": "multicast"
+      }
+    ],
+    "nodes": [
+      {
+        "group": "mscm",
+        "hostname": "mscm_4",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-7",
+            "ipv4": "141.137.244.17",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.74",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.34",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 4,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "pmserv",
+        "hostname": "pmserv_4",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.62",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.22",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 4,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "mspm",
+        "hostname": "mspm_4",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-11",
+            "ipv4": "141.137.244.21",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.78",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.38",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 4,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "httpd",
+        "hostname": "httpd_4",
+        "interfaces": [
+          {
+            "hostname": null,
+            "ipv4": null,
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.100",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.60",
+            "ipv6": null,
+            "ports": {
+              "http": 80,
+              "https": 443
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "httpd",
+        "unit": 4,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      },
+      {
+        "group": "msfm",
+        "hostname": "msfm_4",
+        "interfaces": [
+          {
+            "hostname": "ieatENM5316-17",
+            "ipv4": "141.137.244.27",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "public"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.144.30.87",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "storage"
+          },
+          {
+            "hostname": null,
+            "ipv4": "10.247.246.47",
+            "ipv6": null,
+            "ports": {
+              "http": 8080,
+              "jboss_management": 9999,
+              "jmx": 9999,
+              "rmi": 4447,
+              "ssh": 22
+            },
+            "type": "internal"
+          }
+        ],
+        "ports": {
+          "ssh": 22
+        },
+        "type": "jboss",
+        "unit": 4,
+        "users": [
+          {
+            "password": "passw0rd",
+            "type": "admin",
+            "username": "root"
+          }
+        ]
+      }
+    ],
+    "ports": {
+      "ssh": 22
+    },
+    "type": "svc4",
+    "users": [
+      {
+        "password": "12shroot",
+        "type": "admin",
+        "username": "litp-admin"
+      }
+    ]
+  },
+  {
+    "hostname": "db2",
+    "interfaces": [
+      {
+        "hostname": null,
+        "ipv4": null,
+        "ipv6": null,
+        "ports": {
+          "ssh": 22
+        },
+        "type": "public"
+      },
+      {
+        "hostname": null,
+        "ipv4": "10.247.246.8",
+        "ipv6": "None",
+        "ports": {
+          "ssh": 22
+        },
+        "type": "internal"
+      },
+      {
+        "hostname": null,
+        "ipv4": "10.144.1.7",
+        "ipv6": "None",
+        "ports": {
+          "ssh": 22
+        },
+        "type": "backup"
+      },
+      {
+        "hostname": null,
+        "ipv4": null,
+        "ipv6": null,
+        "ports": {
+          "ssh": 22
+        },
+        "type": "multicast"
+      }
+    ],
+    "nodes": [],
+    "ports": {
+      "ssh": 22
+    },
+    "type": "db2",
+    "users": [
+      {
+        "password": "12shroot",
+        "type": "admin",
+        "username": "litp-admin"
+      }
+    ]
+  },
+  {
+    "hostname": "ieatnetsimv6038-01",
+    "ip": "10.144.36.165",
+    "ports": {
+      "ssh": 22
+    },
+    "type": "netsim",
+    "users": [
+      {
+        "password": "netsim",
+        "type": "admin",
+        "username": "netsim"
+      }
+    ]
+  },
+  {
+    "hostname": "ieatnetsimv6038-02",
+    "ip": "10.144.36.166",
+    "ports": {
+      "ssh": 22
+    },
+    "type": "netsim",
+    "users": [
+      {
+        "password": "netsim",
+        "type": "admin",
+        "username": "netsim"
+      }
+    ]
+  },
+  {
+    "hostname": "ieatnetsimv6038-03",
+    "ip": "10.144.36.167",
+    "ports": {
+      "ssh": 22
+    },
+    "type": "netsim",
+    "users": [
+      {
+        "password": "netsim",
+        "type": "admin",
+        "username": "netsim"
+      }
+    ]
+  },
+  {
+    "hostname": "ieatnetsimv6038-04",
+    "ip": "10.144.36.168",
+    "ports": {
+      "ssh": 22
+    },
+    "type": "netsim",
+    "users": [
+      {
+        "password": "netsim",
+        "type": "admin",
+        "username": "netsim"
+      }
+    ]
+  },
+  {
+    "hostname": "ieatnetsimv6038-05",
+    "ip": "10.144.36.169",
+    "ports": {
+      "ssh": 22
+    },
+    "type": "netsim",
+    "users": [
+      {
+        "password": "netsim",
+        "type": "admin",
+        "username": "netsim"
+      }
+    ]
+  },
+  {
+    "hostname": "ieatnetsimv6038-06",
+    "ip": "10.144.36.170",
+    "ports": {
+      "ssh": 22
+    },
+    "type": "netsim",
+    "users": [
+      {
+        "password": "netsim",
+        "type": "admin",
+        "username": "netsim"
+      }
+    ]
+  },
+  {
+    "hostname": "ieatnetsimv6038-07",
+    "ip": "10.144.36.171",
+    "ports": {
+      "ssh": 22
+    },
+    "type": "netsim",
+    "users": [
+      {
+        "password": "netsim",
+        "type": "admin",
+        "username": "netsim"
+      }
+    ]
+  },
+  {
+    "hostname": "ieatnetsimv6038-08",
+    "ip": "10.144.36.172",
+    "ports": {
+      "ssh": 22
+    },
+    "type": "netsim",
+    "users": [
+      {
+        "password": "netsim",
+        "type": "admin",
+        "username": "netsim"
+      }
+    ]
+  }
+]
+

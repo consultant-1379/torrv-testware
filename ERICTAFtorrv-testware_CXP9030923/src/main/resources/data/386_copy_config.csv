@@ -1,0 +1,2 @@
+command,expectedBodyContains,pollIntervalMillis,pollTimeoutMillis,expectedNodesCopied
+"config copy -n $ManagedElementId1 -s Live -t configDvTest386","Copy nodes started with job ID",1000,60000,1

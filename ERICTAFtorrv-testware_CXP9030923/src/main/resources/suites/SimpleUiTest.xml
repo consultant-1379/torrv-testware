@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CM CLI UI Smoke Test" preserve-order="true" parallel="false">
+    <suite-files>
+        <suite-file path="Group00b_initialize_user_pool.xml" />
+        <suite-file path="Group00c_create_users.xml" />
+        <suite-file path="Group01a_CM_CLI_UI_Smoke_Test.xml" />
+        <suite-file path="Group99_delete_users.xml" />
+    </suite-files>
+</suite>

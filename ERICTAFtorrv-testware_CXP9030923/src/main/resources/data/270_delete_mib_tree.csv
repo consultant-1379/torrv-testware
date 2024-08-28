@@ -1,0 +1,4 @@
+command,expectedBodyContains
+"cmedit delete MeContext=$ManagedElementId1,ManagedElement=1 -ALL",$ManagedElementId1
+"cmedit get MeContext=$ManagedElementId1,ManagedElement=1",0 instance(s)
+"cmedit get MeContext=$ManagedElementId1,ManagedElement=1,ENodeBFunction=1",0 instance(s)

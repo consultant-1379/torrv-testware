@@ -1,0 +1,5 @@
+command,expectedBodyContains
+"config delete configDvTest17","Config successfully deleted"
+"config delete configDvTest17","does not exist"
+"config list",configDvTest18
+"config list",configDvTest19

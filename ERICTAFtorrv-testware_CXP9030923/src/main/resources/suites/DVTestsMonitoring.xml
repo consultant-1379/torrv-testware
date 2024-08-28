@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DV Tests: Monitoring, Group06." preserve-order="true" parallel="false">
+    <suite-files>
+        <suite-file path="Group00a_initialize_node_pool.xml" />
+        <suite-file path="Group00b_initialize_user_pool.xml" />
+        <suite-file path="Group00c_create_users.xml" />      
+        <suite-file path="Group06_Monitoring_Tests.xml" />        
+        <suite-file path="Group99_delete_users.xml" />
+    </suite-files>
+</suite>

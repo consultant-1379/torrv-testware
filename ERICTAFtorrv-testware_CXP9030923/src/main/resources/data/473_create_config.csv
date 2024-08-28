@@ -1,0 +1,7 @@
+command,expectedBodyContains
+"config create configDvTest473a","Config successfully created"
+"config create configDvTest473b","Config successfully created"
+"config list","configDvTest473a"
+"config list","configDvTest473b"
+"cmedit get * MeContext -c=configDvTest473a","0 instance(s)"
+"cmedit get * MeContext -c=configDvTest473b","0 instance(s)"

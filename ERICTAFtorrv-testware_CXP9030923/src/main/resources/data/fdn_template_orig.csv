@@ -1,0 +1,7 @@
+fdn
+"MeContext=$ManagedElementId"
+"MeContext=$ManagedElementId,ManagedElement=1"
+"MeContext=$ManagedElementId,ManagedElement=1,ENodeBFunction=1"
+"MeContext=$ManagedElementId,ManagedElement=1,ENodeBFunction=1,ERBSConnectivityInfo=1"
+"MeContext=$ManagedElementId,ManagedElement=1,ENodeBFunction=1,HeartbeatSupervision=1"
+"MeContext=$ManagedElementId,ManagedElement=1,ENodeBFunction=1,FmSupervision=1"

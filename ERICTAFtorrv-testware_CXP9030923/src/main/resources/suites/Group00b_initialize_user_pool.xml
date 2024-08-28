@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- 'Network Explorer' test suite -->
+<suite name="Group00b_initialize_user_pool">
+    <test name="initialize user pool">
+        <parameter name="security.csv.file" value="users.csv"></parameter>
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="PRE-TEST-SETUP. Initialize Users Pool" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.security.cases.InitializeUserPool">
+            </class>
+        </classes>
+    </test>
+</suite>

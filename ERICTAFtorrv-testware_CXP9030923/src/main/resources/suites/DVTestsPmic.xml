@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DV Tests: PMIC. Group07 Inactive and Active." preserve-order="true" parallel="false">
+    <suite-files>
+        <suite-file path="Group00a_initialize_node_pool.xml" />
+        <suite-file path="Group00b_initialize_user_pool.xml" />
+        <suite-file path="Group00c_create_users.xml" />        
+        <suite-file path="Group07_PMIC_Inactive_Tests.xml" />
+        <suite-file path="Group07_PMIC_Active_Tests.xml" />        
+        <suite-file path="Group99_delete_users.xml" />
+    </suite-files>
+</suite>

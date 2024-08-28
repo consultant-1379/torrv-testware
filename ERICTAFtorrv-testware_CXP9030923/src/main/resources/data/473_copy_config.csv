@@ -1,0 +1,3 @@
+command,expectedBodyContains,pollIntervalMillis,pollTimeoutMillis,expectedNodesCopied
+"config copy -s Live -t configDvTest473a -n $ManagedElementId0;$ManagedElementId1","Copy nodes started with job ID",1000,60000,2
+"config copy -n * -s configDvTest473a -t configDvTest473b","Copy nodes started with job ID",1000,60000,2

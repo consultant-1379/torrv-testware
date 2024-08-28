@@ -1,0 +1,43 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- -->
+<suite name="Group01a_CM_CLI_UI_Smoke_Test.">
+    <test name="Login UI.">
+        <parameter name="user.uid" value="user1"></parameter>
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="CM CLI UI Smoke Test. Login to apache via UI." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheUiLoginLogoutTest">
+                <methods>
+                    <include name="loginParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Execute CM CLI command.">
+        <parameter name="commands.template.csv.file" value="CliAppUiTest.csv" />
+        <parameter name="testId" value="TORF-XXXX" />
+        <parameter name="testTitle"
+            value="CM CLI UI Smoke Test. Test UI functionality of CM CLI App." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.CliAppUiTest" />
+        </classes>
+    </test>
+    <test name="Logout Ui.">
+        <parameter name="user.uid" value="user1"></parameter>
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="CM CLI UI Smoke Test. Logout of apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheUiLoginLogoutTest">
+                <methods>
+                    <include name="logoutParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

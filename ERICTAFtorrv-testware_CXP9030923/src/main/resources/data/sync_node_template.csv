@@ -1,0 +1,7 @@
+command,expectedBodyContains
+"cmedit get NetworkElement=$ManagedElementId,CmNodeHeartbeatSupervision=1","1 instance(s)"
+"cmedit get NetworkElement=$ManagedElementId,InventorySupervision=1","1 instance(s)"
+"cmedit set NetworkElement=$ManagedElementId,CmNodeHeartbeatSupervision=1 active=true","1 instance(s) updated"
+"fmedit set NetworkElement=$ManagedElementId,FmAlarmSupervision=1 alarmSupervisionState=true","Supervision has been enabled successfully for 1 instance(s)"
+"cmedit set NetworkElement=$ManagedElementId,InventorySupervision=1 active=true","1 instance(s) updated"
+"cmedit get NetworkElement=$ManagedElementId,CmFunction=1;NetworkElement=$ManagedElementId,CppConnectivityInformation=1","dtoType"

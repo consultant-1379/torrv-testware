@@ -1,0 +1,3 @@
+command,expectedBodyContains
+"cmedit set MeContext=$ManagedElementId0,ManagedElement=1 userLabel=label1",1 instance(s) updated
+"cmedit get $ManagedElementId0 ManagedElement.(userLabel)","""value"":""userLabel : label1"""

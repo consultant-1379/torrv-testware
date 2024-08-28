@@ -1,0 +1,292 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Group02_CM_CLI_Config_Tests">
+    <test name="build node data source">
+        <parameter name="groupNames" value=""></parameter>
+        <parameter name="numOfNodes" value="2"></parameter>
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.BuildDataSource" />
+        </classes>
+    </test>
+    <test name="Login user test.">
+        <parameter name="user.uid" value="user1"></parameter>
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. Login to apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="loginParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Setup: Check that nodes do not exist.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. Check node doesn't exist." />
+        <parameter name="commands.template.csv.file" value="node_not_exist_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Add nodes.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. Add Nodes." />
+        <parameter name="commands.template.csv.file" value="add_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.AddNodeTest" />
+        </classes>
+    </test>
+    <test name="Sync Nodes.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. Sync nodes." />
+        <parameter name="commands.template.csv.file" value="sync_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.SyncNodeTest" />
+        </classes>
+    </test>
+    <test name="Create Config 17">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-17 Step 01" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. Operator can create a non-live Config and copy in data from from Live Configuration (eNodeB) TORF-9981/13004." />
+        <parameter name="commands.template.csv.file" value="17_create_config.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <!--<test name="Copy Config 17"> -->
+    <!--<parameter name="testId" value="TORRV-ZEPHYR-TC-17 Step 02" /> -->
+    <!--<parameter name="testTitle" value="Group02_CM_CLI_Config_Tests. Operator 
+        can create a non-live Config and copy in data from from Live Configuration 
+        (eNodeB) TORF-9981/13004." /> -->
+    <!--<parameter name="data.csv.template.file" value="17_copy_config.csv"/> -->
+    <!--<classes> -->
+    <!--<class name="com.ericsson.nms.rv.taf.test.cmapache.cases.CliConfigCommandsTest" 
+        /> -->
+    <!--</classes> -->
+    <!--</test> -->
+    <test name="Create Config 19.">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-19 Step 01" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. CMEDIT_Administrator sets an empty non live Config with scope of a specified node range (eNodeBs) and MO classes from Live environment TORF-12998/12999/13000." />
+        <parameter name="commands.template.csv.file" value="19_create_config.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Copy Specified Nodes into an Empty Config.">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-19 Step 02" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. CMEDIT_Administrator sets an empty non live Config with scope of a specified node range (eNodeBs) and MO classes from Live environment TORF-12998/12999/13000." />
+        <parameter name="data.csv.template.file"
+            value="19_copy_specified_nodes_into_empty_config.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.CliConfigCommandsTest" />
+        </classes>
+    </test>
+    <test name="Logout user test.">
+        <parameter name="user.uid" value="user1"></parameter>
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. Logout of apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="logoutParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Login user test2.">
+        <parameter name="user.uid" value="user2"></parameter>
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. Login to apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="loginParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Create and edit config 18">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-18" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. Operator can create a non live Config with manually created data TORF-12994" />
+        <parameter name="commands.template.csv.file" value="18_create_edit_config.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Logout user test2.">
+        <parameter name="user.uid" value="user2"></parameter>
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. Logout of apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="logoutParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Login user test3.">
+        <parameter name="user.uid" value="user3"></parameter>
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. Login to apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="loginParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="List config and contents.">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-46" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. Operator lists all Configurations and its contents TORF-12991/12992/12993" />
+        <parameter name="commands.template.csv.file" value="46_list_config.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Delete a live config.">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-47" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. Operator deletes Configurations TORF-14404" />
+        <parameter name="commands.template.csv.file" value="47_delete_single_config.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Create config 473">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-473 Step 01" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. CMEDIT_ADMINISTRATOR Updates data in a Non-Live Configuration using data from another Non-Live Configuration (eNodeB) TORF-13001." />
+        <parameter name="commands.template.csv.file" value="473_create_config.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Copy config to config 473">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-473 Step 02" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. CMEDIT_ADMINISTRATOR Updates data in a Non-Live Configuration using data from another Non-Live Configuration (eNodeB) TORF-13001." />
+        <parameter name="data.csv.template.file" value="473_copy_config.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.CliConfigCommandsTest" />
+        </classes>
+    </test>
+    <test name="Verify copy config to config 473">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-473 Step 03" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. CMEDIT_ADMINISTRATOR Updates data in a Non-Live Configuration using data from another Non-Live Configuration (eNodeB) TORF-13001." />
+        <parameter name="commands.template.csv.file" value="473_diff_command.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Create Config 386.">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-386 Step 01" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. CMEDIT_ADMINISTRATOR compares non-live configuration with live configuration TORF-13407/13410." />
+        <parameter name="commands.template.csv.file" value="386_create_config.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Copy config 386">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-386 Step 02" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. CMEDIT_ADMINISTRATOR compares non-live configuration with live configuration TORF-13407/13410." />
+        <parameter name="data.csv.template.file" value="386_copy_config.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.CliConfigCommandsTest" />
+        </classes>
+    </test>
+    <test name="Compare non-live and live config 386">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-386 Step 03" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. CMEDIT_ADMINISTRATOR compares non-live configuration with live configuration TORF-13407/13410." />
+        <parameter name="commands.template.csv.file"
+            value="386_compare_nonlive_and_live_config.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Group02 teardown commands. ">
+        <parameter name="testId" value="Teardown" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. Remove configurations after testing." />
+        <parameter name="commands.template.csv.file" value="Group02_teardown_commands.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest" />
+        </classes>
+    </test>
+    <test name="Delete nodes using -ALL param.">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. Delete nodes using -ALL parameter." />
+        <parameter name="commands.template.csv.file" value="delete_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DeleteNodeTest">
+            </class>
+        </classes>
+    </test>
+    <test
+        name="Teardown: Check that nodes do not exist after deleting nodes.">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. Check node doesn't exist" />
+        <parameter name="commands.template.csv.file" value="node_not_exist_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Logout user test3.">
+        <parameter name="user.uid" value="user3"></parameter>
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group02_CM_CLI_Config_Tests. Logout of apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="logoutParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

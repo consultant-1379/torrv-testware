@@ -1,0 +1,5 @@
+command,expectedBodyContains
+"cmedit get * ENodeBFunction.(userLabel==""DVTest"") -ns=ERBS_NODE_MODEL -v=$ENodeBFunctionModelVersion0",$ALL_NUM instance(s)
+"cmedit get $ManagedElementId1 ENodeBFunction.userLabel==DVTest -ns=ERBS_NODE_MODEL -v=$ENodeBFunctionModelVersion0",1 instance(s)
+"cmedit get $5ManagedElementId_BEGIN0 ENodeBFunction.userLabel==DVTest -ns=ERBS_NODE_MODEL -v=$ENodeBFunctionModelVersion0",$5ManagedElementId_BEGIN_NUM0 instance(s)
+"cmedit get $4ManagedElementId_END0 ENodeBFunction.userLabel==DVTest -ns=ERBS_NODE_MODEL -v=$ENodeBFunctionModelVersion0",$4ManagedElementId_END_NUM0 instance(s)

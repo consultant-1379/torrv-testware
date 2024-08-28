@@ -1,0 +1,3 @@
+command,expectedBodyContains
+"cmedit set MeContext=$ManagedElementId1,ManagedElement=1,ENodeBFunction=1 dnsLookupTimer=500",1 instance(s) updated
+"cmedit get $ManagedElementId1 ENodeBFunction.(dnsLookupTimer)","""value"":""dnsLookupTimer : 500"""

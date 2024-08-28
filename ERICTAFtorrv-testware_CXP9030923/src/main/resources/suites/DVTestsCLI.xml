@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DV Tests: CLI. CLI UI test, Group01 and Group02." preserve-order="true" parallel="false">
+    <suite-files>
+        <suite-file path="Group00a_initialize_node_pool.xml" />
+        <suite-file path="Group00b_initialize_user_pool.xml" />
+        <suite-file path="Group00c_create_users.xml" />
+        <suite-file path="Group01a_CM_CLI_UI_Smoke_Test.xml" />
+        <suite-file path="Group01b_CM_CLI_Tests.xml" />
+        <suite-file path="Group02_CM_CLI_Config_Tests.xml" />
+        <suite-file path="Group99_delete_users.xml" />
+    </suite-files>
+</suite>

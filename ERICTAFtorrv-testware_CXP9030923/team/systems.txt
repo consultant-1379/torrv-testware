@@ -1,0 +1,5 @@
+Hostname,                                    IP,                  Password,    LITP,        ENM,         Available,   Comment
+atvts2370.athtem.eei.ericsson.se,            141.137.232.113,     shroot,      2.23.21,     1.7.29,      Yes,         Vapp
+Deployment-5301 (ieatlms4682-1 id: 301),     141.137.237.165,     12shroot,    2.23.21,     1.7.29,      Yes,         RVB environment
+Deployment-5261 (ieatlms4419-1 id: 286),     131.160.216.69,      12shroot,    2.23.21,     1.7.29,      Yes,         RVB environment
+Deployment-5271 (ieatclvmlms917-1 id: 293),  131.160.217.102,     12shroot,           ,           ,      Yes,         Belongs to Genoa DV team

@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- 'Network Explorer' test suite -->
+<suite name="Group00a_initialize_node_pool">
+    <test name="initialize node pool">
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.InitializeNodePool">
+            </class>
+        </classes>
+    </test>
+</suite>

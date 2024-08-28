@@ -1,0 +1,485 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Group08_FM_Tests">
+    <test name="build node data source">
+        <parameter name="groupNames" value=""></parameter>
+        <parameter name="numOfNodes" value="1"></parameter>
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.BuildDataSource" />
+        </classes>
+    </test>
+
+    <test name="Cease all alarm on node">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle" value="Group08_FM_Tests. Cease all alarms" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmRestTest">
+                <methods>
+                    <include name="ceaseAlarms" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test FM sending alarm">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle" value="Group08_FM_Tests. Test sending alarm" />
+        <parameter name="alarm.problem" value="FM DV Auto sync Alarm" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmRestTest">
+                <methods>
+                    <include name="testFmSendAlarm" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Login user test.">
+        <parameter name="user.uid" value="user1"></parameter>
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle" value="Group08_FM_Tests. Login to apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="loginParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Setup: Check that nodes do not exist.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Check node doesn't exist." />
+        <parameter name="commands.template.csv.file" value="node_not_exist_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest">
+            </class>
+        </classes>
+    </test>
+
+    <test name="Add nodes.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle" value="Group08_FM_Tests. Add Nodes." />
+        <parameter name="commands.template.csv.file" value="add_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.AddNodeTest" />
+        </classes>
+    </test>
+
+    <test name="Sync Nodes.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle" value="Group08_FM_Tests. Sync nodes." />
+        <parameter name="commands.template.csv.file" value="sync_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.SyncNodeTest" />
+        </classes>
+    </test>
+
+    <!-- UI Code Start -->
+    <test name="Login UI.">
+        <parameter name="user.uid" value="user1"></parameter>
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Login to apache via UI." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheUiLoginLogoutTest">
+                <methods>
+                    <include name="loginParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Add Topology Data by Searching for Network Objects.">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Add Topology Data by Searching for Network Objects." />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmUiTest">
+                <methods>
+                    <include name="testAddNodeAndClickBySearchNetworkObject" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!---->
+    <test name="Enable FM Supervision">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. FM Enable Supervision" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmUiTest">
+                <methods>
+                    <include name="testEnableSupervision" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Test FM Auto sync alarm exists">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-439" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Verify alarm exists after node added to ENM" />
+        <parameter name="alarm.problem" value="FM DV Auto sync Alarm" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmUiTest">
+                <methods>
+                    <include name="verifyAlarmExists" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test FM sending Spontaneous alarm">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-413 step1" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Test sending Spontaneous alarm" />
+        <parameter name="alarm.problem" value="FM DV Spontaneous Alarm" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmRestTest">
+                <methods>
+                    <include name="testFmSendAlarm" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test FM Spontaneous alarm exists">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-413 step2" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Verify Spontaneous alarm exists" />
+        <parameter name="alarm.problem" value="FM DV Spontaneous Alarm" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmUiTest">
+                <methods>
+                    <include name="verifyAlarmExists" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test FM adding comment: Alarm Generation">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-502 step1" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Test FM adding comment:Alarm Generation" />
+        <parameter name="alarm.problem" value="FM DV Generated Alarms" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmRestTest">
+                <methods>
+                    <include name="testFmSendAlarm" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test FM adding comment">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-502 step2" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Test FM adding comment" />
+        <parameter name="alarm.problem" value="FM DV Generated Alarms" />
+        <parameter name="alarm.comment" value="FM DV generated comment" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmUiTest">
+                <methods>
+                    <include name="testAddComment" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test
+        name="Test FM Alarm Acknowledgement/Unacknowledgement: Alarm Generation">
+        <parameter name="testId" value="Setup Step" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Test FM Alarm Acknowledgement:Alarm Generation" />
+        <parameter name="alarm.problem"
+            value="FM DV Alarm: Acknowledgement/Unacknowledgement" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmRestTest">
+                <methods>
+                    <include name="testFmSendAlarm" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test FM Alarm Acknowledgement">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-477" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. FM Test to Verify Alarm Acknowledgement" />
+        <parameter name="alarm.problem"
+            value="FM DV Alarm: Acknowledgement/Unacknowledgement" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmUiTest">
+
+                <methods>
+                    <include name="testAlarmAcknowledge" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test FM Alarm Unacknowledgement">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-501" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. FM Test to Verify Alarm Unacknowledgement" />
+        <parameter name="alarm.problem"
+            value="FM DV Alarm: Acknowledgement/Unacknowledgement" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmUiTest">
+                <methods>
+                    <include name="testAlarmUnacknowledge" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test FM Alarm Acknowledgement/Clear: Alarm Generation">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-500 step1" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Test FM Alarm Acknowledgement/Clear:Alarm Generation" />
+        <parameter name="alarm.problem" value="FM DV Alarm: Acknowledgement/Clear" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmRestTest">
+                <methods>
+                    <include name="testFmSendAlarm" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test FM Alarm Acknowledgement to clear alarm">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-500 step2" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. FM Test to Verify Alarm Acknowledgement/Clear" />
+        <parameter name="alarm.problem" value="FM DV Alarm: Acknowledgement/Clear" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmUiTest">
+                <methods>
+                    <include name="testAlarmAcknowledge" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test FM clear alarm">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-500 step3" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Test FM clear alarm" />
+        <parameter name="alarm.problem" value="FM DV Spontaneous Alarm" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmUiTest">
+                <methods>
+                    <include name="testClearAlarm" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test FM history alarms">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-436" />
+        <parameter name="testTitle" value="Group08_FM_Tests. Test history alarms" />
+        <parameter name="alarm.problem" value="FM DV History Alarm" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmUiTest">
+                <methods>
+                    <include name="testHistoryAlarm"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test FM Disable Supervision">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-437 step1" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. FM Disable Supervision" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmUiTest">
+                <methods>
+                    <include name="testDisableSupervision" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test FM Enable Supervision">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-437 step2" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. FM Enable Supervision" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmUiTest">
+                <methods>
+                    <include name="testEnableSupervision" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test FM sending alarm after manual supervision">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-437 step3" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Test sending Spontaneous alarm" />
+        <parameter name="alarm.problem" value="FM DV manual supervision Alarm" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmRestTest">
+                <methods>
+                    <include name="testFmSendAlarm" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test FM alarm exists after manual supervision">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-437 step4" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Verify alarm exists after manual supervision" />
+        <parameter name="alarm.problem" value="FM DV manual supervision Alarm" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmUiTest">
+                <methods>
+                    <include name="verifyAlarmExists" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test Cease Alarm Behaviour: Alarm generation">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-592 step1" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Test sending Cease Alarm: Alarm generation" />
+        <parameter name="alarm.problem" value="FM DV Cease Alarm Behaviour" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmRestTest">
+                <methods>
+                    <include name="testFmSendAlarm" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test Cease Alarm Behaviour: Verify alarm exists">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-592 step2" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Cease Alarm Behaviour: Verify alarm exists" />
+        <parameter name="alarm.problem" value="FM DV Cease Alarm Behaviour" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmUiTest">
+                <methods>
+                    <include name="verifyAlarmExists" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test Cease Alarm Behaviour: Cease All Alarms">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-592 step3" />
+        <parameter name="testTitle" value="Group08_FM_Tests. Cease all alarms" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmRestTest">
+                <methods>
+                    <include name="ceaseAlarms" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test FM Cease Alarm Behaviour">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-592 step4" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Verify FM Cease Alarm Behaviour" />
+        <parameter name="alarm.problem" value="FM DV Cease Alarm Behaviour" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmUiTest">
+                <methods>
+                    <include name="verifyCeaseAlarmBehaviour" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test HeartBeat alarm">
+        <parameter name="testId" value="TORRV-ZEPHYR-TC-438" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Verify HeartBeat alarms" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmUiTest">
+                <methods>
+                    <include name="testFMHeartBeatAlarm" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test
+        name="Disable Supervision and remove node from Fm Network Elements list">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Disable Supervision and remove node from Fm Network Elements list" />
+        <classes>
+            <class name="com.ericsson.nms.rv.taf.test.fm.cases.FmUiTest">
+                <methods>
+                    <include name="testRemoveNodeFromList" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Logout UI.">
+        <parameter name="user.uid" value="user1"></parameter>
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Logout to apache via UI." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheUiLoginLogoutTest">
+                <methods>
+                    <include name="logoutParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- UI Code End -->
+    <test name="Delete nodes using -ALL param.">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Delete nodes using -ALL parameter." />
+        <parameter name="commands.template.csv.file" value="delete_node_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DeleteNodeTest">
+            </class>
+        </classes>
+    </test>
+
+    <test
+        name="Teardown: Check that nodes do not exist after deleting nodes.">
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle"
+            value="Group08_FM_Tests. Check node doesn't exist" />
+        <parameter name="commands.template.csv.file" value="node_not_exist_template.csv" />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.cmapache.cases.DoCliCommandsFromTemplateTest">
+            </class>
+        </classes>
+    </test>
+
+    <test name="Logout Rest.">
+        <parameter name="user.uid" value="user1"></parameter>
+        <parameter name="testId" value="Teardown Step" />
+        <parameter name="testTitle" value="Group08_FM_Tests. Logout of apache." />
+        <classes>
+            <class
+                name="com.ericsson.nms.rv.taf.test.apache.cases.ApacheLoginLogoutTest">
+                <methods>
+                    <include name="logoutParamDriven" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

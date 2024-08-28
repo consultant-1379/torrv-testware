@@ -1,0 +1,2 @@
+command,expectedBodyContains
+"config diff configDvTest473b configDvTest473a --detail ne --include","No differences found"

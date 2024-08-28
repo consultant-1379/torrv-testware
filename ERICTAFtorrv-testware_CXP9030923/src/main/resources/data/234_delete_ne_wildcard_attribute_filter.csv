@@ -1,0 +1,10 @@
+command,expectedBodyContains
+"cmedit set MeContext=$ManagedElementId2,ManagedElement=1,ENodeBFunction=1 timePhaseMaxDeviation=50,userLabel=""DVTestGroup01X"",dnsLookupTimer=20","1 instance(s) updated"
+"cmedit set MeContext=$ManagedElementId3,ManagedElement=1,ENodeBFunction=1 timePhaseMaxDeviation=50,userLabel=""DVTestGroup01X"",dnsLookupTimer=20","1 instance(s) updated"
+"cmedit set MeContext=$ManagedElementId4,ManagedElement=1,ENodeBFunction=1 timePhaseMaxDeviation=60,userLabel=""DVTestGroup01Y"",dnsLookupTimer=40","1 instance(s) updated"
+"cmedit set MeContext=$ManagedElementId5,ManagedElement=1,ENodeBFunction=1 timePhaseMaxDeviation=60,userLabel=""DVTestGroup01Y"",dnsLookupTimer=40","1 instance(s) updated"
+"cmedit get * ENodeBFunction.(timePhaseMaxDeviation==50,userLabel==""DVTestGroup01X"",dnsLookupTimer==20)","2 instance(s)"
+"cmedit get * ENodeBFunction.(timePhaseMaxDeviation==60,userLabel==""DVTestGroup01Y"",dnsLookupTimer==40)","2 instance(s)"
+"cmedit delete * ENodeBFunction.(timePhaseMaxDeviation==50,userLabel==""DVTestGroup01X"",dnsLookupTimer==20) -ALL","$ManagedElementId2"
+"cmedit get * ENodeBFunction.(timePhaseMaxDeviation==50,userLabel==""DVTestGroup01X"",dnsLookupTimer==20)","0 instance(s)"
+"cmedit get * ENodeBFunction.(timePhaseMaxDeviation==60,userLabel==""DVTestGroup01Y"",dnsLookupTimer==40)","2 instance(s)"

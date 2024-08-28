@@ -1,0 +1,21 @@
+{
+    "@class": "statistical",
+    "name": "SubscriptionWithScheduleInfo",
+    "id" : "",
+    "nextVersionName": null,
+    "prevVersionName": null,
+    "owner": null,
+    "description": "taftestEdited",
+    "userType": "SYSTEM_DEF",
+    "type": "STATISTICAL",
+    "scheduleInfo":null,
+    "administrationState": "INACTIVE",
+    "operationalState": "NA",
+    "jobStatus": "OK",
+    "isPnPEnabled": false,
+    "isFilterOnManagedFunction": false,
+    "isFilterOnManagedElement": false,
+    "nodes": [],
+    "counterEventInfo":[]
+}
+
